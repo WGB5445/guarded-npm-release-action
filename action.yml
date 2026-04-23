@@ -219,4 +219,4 @@ runs:
       run: |
         set -euo pipefail
         cd "${{ inputs.package_dir }}"
-        NODE_AUTH_TOKEN="" npm publish --tag "${{ steps.meta.outputs.dist_tag }}" --access "${{ inputs.publish_access }}" --provenance
+        npm publish --tag "${{ steps.meta.outputs.dist_tag }}" --access "${{ inputs.publish_access }}" --provenance
