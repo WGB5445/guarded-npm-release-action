@@ -170,6 +170,13 @@ runs:
       shell: bash
       run: pnpm install --frozen-lockfile
 
+    - name: Upgrade npm for trusted publishing
+      shell: bash
+      run: |
+        set -euo pipefail
+        npm install -g npm@11.6.2
+        npm --version
+
     - name: Build
       shell: bash
       run: pnpm build
