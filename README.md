@@ -40,6 +40,20 @@ jobs:
           publish_mode: dry-run
 ```
 
+## Security recommendations
+
+- Pin this action to a full commit SHA for production release workflows.
+- Treat `@v1` as a convenience alias for quick trials, not as a production-stable reference.
+
+Example (recommended):
+
+```yaml
+- uses: WGB5445/guarded-npm-release-action@a477e7a31c39ca9a0474e51cd1cbbe84daef2c34
+  with:
+    package_dir: packages/sdk
+    publish_mode: dry-run
+```
+
 ## Inputs / outputs
 
 See [`action.yml`](./action.yml).
